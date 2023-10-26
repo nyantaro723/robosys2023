@@ -1,3 +1,6 @@
-#!/bin/bash
+#!/bin/bash -xv
 
-seq 5 | ./plus
+out=$(seq 5 | ./plus)
+
+[ "${out}" = 15 ]
+
