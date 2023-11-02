@@ -15,4 +15,4 @@
 
 * Ubuntu
  
-* © 2023 Ryusei Matsuki
+© 2023 Ryusei Matsuki
