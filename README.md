@@ -15,6 +15,6 @@
 
 ## テスト環境
 
-* Ubuntu
+* Ubuntu 20.04
  
 © 2023 Ryusei Matsuki
