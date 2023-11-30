@@ -13,7 +13,7 @@
 $ seq 10 | ./plus を実行すると、1～10までの値を１つずつ足したものが結果として出力される。
 
 
-## テストの結果
+## テスト結果
 
 ![結果の画像](https://github.com/nyantaro723/robosys2023/blob/main/example1.png)
 
