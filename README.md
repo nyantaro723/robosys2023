@@ -20,6 +20,10 @@
 
 * Ubuntu 20.04
 
+## テストの結果
+
+![例の画像](screenshots/example1.png)
+
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 
 * このパッケージは，3条項BSDライセンスのもとryuichiueda/emcl由来のコード（© 2022 Ryuichi Ueda）を利用しています．
