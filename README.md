@@ -6,7 +6,7 @@
 
 ## 使い方
 
-ディレクトリ: $ cd GIT/robosys2023/
+ディレクトリ: $ cd robosys2023/
 
 実行例: $ seq 10 | ./plus
 
