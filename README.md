@@ -22,7 +22,7 @@
 
 ## テストの結果
 
-![結果の画像](https://github.com/nyantaro723/robosys2023/example1.png.git)
+![結果の画像](https://github.com/nyantaro723/robosys2023/blob/main/example1.png)
 
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 
