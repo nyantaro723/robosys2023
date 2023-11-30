@@ -13,18 +13,21 @@
 $ seq 10 | ./plus を実行すると、1～10までの値を１つずつ足したものが結果として出力される。
 
 
+## テストの結果
+
+![結果の画像](https://github.com/nyantaro723/robosys2023/blob/main/example1.png)
+
+
 ## 必要なソフトウェア
 
 * Python
   * テスト済みバージョン: 3.7～3.10
 
+
 ## テスト環境
 
 * Ubuntu 20.04
 
-## テストの結果
-
-![結果の画像](https://github.com/nyantaro723/robosys2023/blob/main/example1.png)
 
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 
