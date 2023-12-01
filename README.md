@@ -15,7 +15,8 @@ $ seq 10 | ./plus を実行すると、1～10までの値を１つずつ足し�
 
 ## テスト結果
 
-![結果の画像](https://github.com/nyantaro723/robosys2023/blob/main/example1.png)
+'$ seq 10 | ./plus'
+'55' 
 
 
 ## 必要なソフトウェア
