@@ -6,17 +6,23 @@
 
 ## ダウンロード
 
-* git clone git@github.com:nyantaro723/robosys2023.git
+```bash
+git clone git@github.com:nyantaro723/robosys2023.git
+```
+
+<br>
 
 ## 使い方
 
 ディレクトリ:
+
 ```bash
 $ cd robosys2023/  
 ```  
 
 
 実行例:
+
 ```bash
 $ seq "自然数" | ./plus
 ```
