@@ -16,9 +16,9 @@ $ cd robosys2023/
 ```bash
 $ seq "自然数" | ./plus
 ```
-   
-
-
+<br>
+<br>   
+<br>
 例えば、
 ```bash
 $ seq 10 | ./plus 
