@@ -10,15 +10,15 @@ ng () {
 res=0
 
 ### I/O TEST ###
-out=$(seq 5 | python3 your_program.py)
+out=$(seq 5 | ./plus)
 [ "${out}" = 15 ] || ng $LINENO
 
 ### STRANGE INPUT ###
-out=$(echo あ | python3 your_program.py)
+out=$(echo あ | ./plus)
 [ "$?" = 1 ]      || ng $LINENO
 [ "${out}" = "" ] || ng $LINENO
 
-out=$(echo | python3 your_program.py)
+out=$(echo | ./plus)
 [ "$?" = 1 ]      || ng $LINENO
 [ "${out}" = "" ] || ng $LINENO
 
