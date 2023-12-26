@@ -4,34 +4,15 @@
 
 import sys
 
-def calculate_stats(numbers):
-    total = sum(numbers)
-    count = len(numbers)
-    average = total / count if count > 0 else 0
-    return total, count, average
-
 def tonum(s):
     try:
         return int(s)
-    except ValueError:
-        return float(s)
+    except:
+        return int(s)
 
-def main():
-    numbers = []
+ans = 0
+for line in sys.stdin:
+    line = line.rstrip()
+    ans += tonum(line)
 
-    for line in sys.stdin:
-        line = line.rstrip()
-        try:
-            num = tonum(line)
-            numbers.append(num)
-        except ValueError:
-            print(f"Ignored invalid input: {line}")
-
-    total, count, average = calculate_stats(numbers)
-
-    print(f"Total: {total}")
-    print(f"Count: {count}")
-    print(f"Average: {average}")
-
-if __name__ == "__main__":
-    main()
+print(ans)
