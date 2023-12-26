@@ -4,7 +4,7 @@
 
 <br>
 
-## plusコマンド
+* plusコマンド
 
 ![test](https://github.com/nyantaro723/robosys2023/actions/workflows/test.yml/badge.svg)
 
