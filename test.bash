@@ -22,6 +22,6 @@ out=$(echo | python3 plus)
 [ "$?" = 1 ] || ng $LINENO
 [ "${out}" = "Error converting '' to integer\nNo valid input numbers." ] || ng $LINENO
 
-[ "$res" = 0 ] && echo "OK"
+[ "$res" = 0 ] && echo "OK" || echo "Test Failed"
 exit $res
 
