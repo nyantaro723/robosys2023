@@ -10,21 +10,17 @@ ng () {
 res=0
 
 ### I/O TEST ###
-out=$(seq 5 | ./plus)
-echo "Debug: out=$out"
-[ "${out}" = "Total: 15\nCount: 5\nAverage: 3.0" ] || ng $LINENO
+out=$(seq 5 | python3 your_program.py)
+[ "${out}" = 15 ] || ng $LINENO
 
 ### STRANGE INPUT ###
-out=$(echo あ | ./plus)
-echo "Debug: out=$out"
-[ "$?" = 1 ] || ng $LINENO
-[ "${out}" = "Error converting 'あ' to integer\nNo valid input numbers." ] || ng $LINENO
+out=$(echo あ | python3 your_program.py)
+[ "$?" = 1 ]      || ng $LINENO
+[ "${out}" = "" ] || ng $LINENO
 
-out=$(echo | ./plus)
-echo "Debug: out=$out"
-[ "$?" = 1 ] || ng $LINENO
-[ "${out}" = "Error converting '' to integer\nNo valid input numbers." ] || ng $LINENO
+out=$(echo | python3 your_program.py)
+[ "$?" = 1 ]      || ng $LINENO
+[ "${out}" = "" ] || ng $LINENO
 
-[ "$res" = 0 ] && echo "OK" || echo "Test Failed"
+[ "$res" = 0 ] && echo OK
 exit $res
-
