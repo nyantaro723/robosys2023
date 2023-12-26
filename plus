@@ -7,12 +7,26 @@ import sys
 def tonum(s):
     try:
         return int(s)
-    except:
-        return int(s)
+    except ValueError:
+        print(f"Error converting '{s}' to integer")
+        return None
 
-ans = 0
+total = 0
+count = 0
+
 for line in sys.stdin:
     line = line.rstrip()
-    ans += tonum(line)
+    num = tonum(line)
+    
+    if num is not None:
+        total += num
+        count += 1
 
-print(ans)
+if count > 0:
+    average = total / count
+    print(f"Total: {total}")
+    print(f"Count: {count}")
+    print(f"Average: {average}")
+else:
+    print("No valid input numbers.")
+
