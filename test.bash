@@ -11,7 +11,7 @@ res=0
 
 ### I/O TEST ###
 out=$(seq 5 | python3 plus)
-[ "${out}" = $'Total: 15\nCount: 5\nAverage: 3.0' ] || ng $LINENO
+[ "${out}" = "Total: 15\nCount: 5\nAverage: 3.0" ] || ng $LINENO
 
 ### STRANGE INPUT ###
 out=$(echo あ | python3 plus)
@@ -22,6 +22,6 @@ out=$(echo | python3 plus)
 [ "$?" = 1 ] || ng $LINENO
 [ "${out}" = "Error converting '' to integer\nNo valid input numbers." ] || ng $LINENO
 
-[ "$res" = 0 ] && echo "OK" || echo "Test Failed"
+[ "$res" = 0 ] && echo "OK"
 exit $res
 
