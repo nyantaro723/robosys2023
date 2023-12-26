@@ -8,14 +8,23 @@ import sys
 def tonum(s):
     try:
         return int(s)
-    except:
-        return int(s)
+    except ValueError:
+        print(f"Error converting '{s}' to integer")
+        return 0
 
-
-ans = 0
+total = 0
+count = 0
+    
 for line in sys.stdin:
     line = line.rstrip()
-    ans += tonum(line)
+    if not line:
+        break
 
-print(ans)
+    num = tonum(line)
+    total += num
+    count += 1
 
+print(f"Total: {total}")
+print(f"Count: {count}")
+if count > 0:
+    print(f"Average: {total / count}")
