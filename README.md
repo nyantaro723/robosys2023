@@ -15,7 +15,7 @@
 ## ダウンロード
 
 ```bash
-git clone git@github.com:nyantaro723/robosys2023.git
+git clone https://github.com/nyantaro723/robosys2023.git
 ```
 
 ## 使い方
