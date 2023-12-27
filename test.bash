@@ -1,6 +1,7 @@
 #!/bin/bash
 # SPDX-FileCopyrightText: 2023 Ryusei Matsuki
 # SPDX-License-Identifier: BSD-3-clause
+
 ng () {
     echo NG at Line $1
     res=1
@@ -33,4 +34,3 @@ echo "expected: ${expected}"
 [ "${out}" == "${expected}" ] || ng $LINENO
 
 [ "$res" == 0 ] && echo "OK" || echo "Test Failed"
-
