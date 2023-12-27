@@ -15,7 +15,7 @@ Count: 5
 Average: 3.0"
 echo "out: ${out}"
 echo "expected: ${expected}"
-[ "${out}" = "${expected}" ] || ng $LINENO
+[ "${out}" = "${expected}" ] || ng $LINE
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
