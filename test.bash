@@ -10,32 +10,21 @@ res=0
 
 ### I/O TEST ###
 out=$(seq 5 | ./plus)
-expected="Total: 15
-Count: 5
-Average: 3.0"
+expected="Total: 15\nCount: 5\nAverage: 3.0"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "${out}" = "${expected}" ] || ng $LINENO
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
-expected="NG at Line 13
-Error converting 'あ' to integer
-Total: 0
-Count: 1
-Average: 0.0"
+expected="NG at Line 13\nError converting 'あ' to integer\nTotal: 0\nCount: 1\nAverage: 0.0"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "$?" = 1 ] || ng $LINENO
 [ "${out}" = "${expected}" ] || ng $LINENO
 
 out=$(echo | ./plus)
-expected="NG at Line 18
-Total: 0
-NG at Line 21
-NG at Line 22
-Test Failed
-Count: 0"
+expected="NG at Line 18\nTotal: 0\nNG at Line 21\nNG at Line 22\nTest Failed\nCount: 0"
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "$?" = 1 ] || ng $LINENO
