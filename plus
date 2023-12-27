@@ -28,5 +28,5 @@ if count > 0:
     print(f"Count: {count}")
     print(f"Average: {average}")
 else:
-    print("No valid input numbers.")
+    print("No valid input numbers. Cannot calculate average.")
 
