@@ -37,4 +37,3 @@ echo "expected: ${expected}"
 [ "${out}" = "${expected}" ] || ng $LINENO
 
 [ "$res" = 0 ] && echo "OK" || echo "Test Failed"
-
