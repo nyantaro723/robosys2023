@@ -27,7 +27,7 @@ echo "expected: ${expected}"
 [ "${out}" == "${expected}" ] || ng $LINENO
 
 out=$(echo | ./plus)
-expected=$'NG at Line 24\nTotal: 0\nNG at Line 27\nNG at Line 28\nTest Failed\nCount: 0'
+expected=$'NG at Line 24\nTotal: 0\nNG at Line 26\nNG at Line 27\nTest Failed\nCount: 0'
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "$?" == 1 ] || ng $LINENO
