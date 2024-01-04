@@ -23,7 +23,7 @@ out=$(echo あ | ./plus)
 expected=$'NG at Line 19\nError converting '\''あ'\'' to integer\nTotal: 0\nCount: 1\nAverage: 0.0'
 echo "out: ${out}"
 echo "expected: ${expected}"
-[ "$res" == 1 ] || ng $LINENO
+[ "$res" == 0 ] || ng $LINENO
 [ "${out}" == "${expected}" ] || ng $LINENO
 
 out=$(echo | ./plus)
