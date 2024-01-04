@@ -16,20 +16,23 @@ Count: 5
 Average: 3.0"
 echo "out: ${out}"
 echo "expected: ${expected}"
-[ "$(echo "${out}" | tr -d '\n')" == "$(echo "${expected}" | tr -d '\n')" ] || ng $LINENO
+[ "${out}" == "${expected}" ] || ng $LINENO
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
 expected=$'NG at Line 19\nError converting '\''あ'\'' to integer\nTotal: 0\nCount: 1\nAverage: 0.0'
 echo "out: ${out}"
 echo "expected: ${expected}"
-[ "$(echo ${out} | tr -d '\n')" == "$(echo "${expected}" | tr -d '\n')" ] || ng $LINENO
+[ "$res" == 1 ] || ng $LINENO
+[ "${out}" == "${expected}" ] || ng $LINENO
 
 out=$(echo | ./plus)
-expected=$'NG at Line 24\nTotal: 0\nNG at Line 27\nNG at Line 28\nTest Failed\nCount: 0'
+expected=$'NG at Line 24\nTotal: 0\nNG at Line 26\nNG at Line 27\nTest Failed\nCount: 0'
 echo "out: ${out}"
 echo "expected: ${expected}"
-[ "$(echo ${out} | tr -d '\n')" == "$(echo "${expected}" | tr -d '\n')" ] || ng $LINENO
+[ "$res" == 1 ] || ng $LINENO
+[ "${out}" == "${expected}" ] || ng $LINENO
 
 [ "$res" == 0 ] && echo "OK" || echo "Test Failed"
+
 
