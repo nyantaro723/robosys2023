@@ -30,8 +30,8 @@ out=$(echo | ./plus)
 expected=$'NG at Line 24\nTotal: 0\nNG at Line 26\nNG at Line 27\nTest Failed\nCount: 0'
 echo "out: ${out}"
 echo "expected: ${expected}"
-[ "$res" == 0 ] || ng $LINENO
+[ "$res" == 1 ] || ng $LINENO
 [ "${out}" == "${expected}" ] || ng $LINENO
 
-[ "$res" == 0 ] && echo "OK" || echo "Test Failed"
+[ "$res" == 1 ] && echo "Test Failed" || echo "OK"
 
