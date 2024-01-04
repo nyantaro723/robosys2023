@@ -23,13 +23,13 @@ out=$(echo あ | ./plus)
 expected=$'NG at Line 19\nError converting '\''あ'\'' to integer\nTotal: 0\nCount: 1\nAverage: 0.0'
 echo "out: ${out}"
 echo "expected: ${expected}"
-[ "$(echo "${out}" | tr -d '\n')" == "$(echo "${expected}" | tr -d '\n')" ] || ng $LINENO
+[ "$(echo ${out} | tr -d '\n')" == "$(echo "${expected}" | tr -d '\n')" ] || ng $LINENO
 
 out=$(echo | ./plus)
 expected=$'NG at Line 24\nTotal: 0\nNG at Line 27\nNG at Line 28\nTest Failed\nCount: 0'
 echo "out: ${out}"
 echo "expected: ${expected}"
-[ "$(echo "${out}" | tr -d '\n')" == "$(echo "${expected}" | tr -d '\n')" ] || ng $LINENO
+[ "$(echo ${out} | tr -d '\n')" == "$(echo "${expected}" | tr -d '\n')" ] || ng $LINENO
 
 [ "$res" == 0 ] && echo "OK" || echo "Test Failed"
 
