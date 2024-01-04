@@ -20,14 +20,15 @@ echo "expected: ${expected}"
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
-expected=$'NG at Line 19\nError converting '\''あ'\'' to integer\nTotal: 0\nCount: 1\nAverage: 0.0'
+expected=$'NG at Line 19\nError converting '\''あ'\'' to integer\nNo valid input numbers. Cannot calculate average.'
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "$res" == 1 ] || ng $LINENO
 [ "${out}" == "${expected}" ] || ng $LINENO
 
+### EMPTY INPUT ###
 out=$(echo | ./plus)
-expected=$'NG at Line 24\nTotal: 0\nNG at Line 26\nNG at Line 27\nTest Failed\nCount: 0'
+expected=$'NG at Line 24\nNo valid input numbers. Cannot calculate average.'
 echo "out: ${out}"
 echo "expected: ${expected}"
 [ "$res" == 1 ] || ng $LINENO
