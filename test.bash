@@ -33,5 +33,5 @@ echo "expected: ${expected}"
 [ "$res" == 1 ] || ng $LINENO
 [ "${out}" == "${expected}" ] || ng $LINENO
 
-[ "$res" == 0 ] && echo "OK" || echo "Test Failed"
+[ "$res" == 0 ] && echo "OK"
 
