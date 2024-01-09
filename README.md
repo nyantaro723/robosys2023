@@ -8,7 +8,7 @@
 
 ![test](https://github.com/nyantaro723/robosys2023/actions/workflows/test.yml/badge.svg)
 
-標準入力から読み込んだ数字を足す。
+このコマンドは、標準入力から数値を読み取り、それらの合計の値、個数、および平均値を計算して出力する統計計算プログラムである。
 
 <br>
 
@@ -32,7 +32,6 @@ $ cd robosys2023/
 ```bash
 $ seq "自然数" | ./plus
 ```
-<br>
 <br>
    
 例えば、
